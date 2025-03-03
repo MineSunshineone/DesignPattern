@@ -1,4 +1,4 @@
-package c1;
+package c1.Config;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;

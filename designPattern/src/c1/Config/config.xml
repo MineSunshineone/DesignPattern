@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-    <className>c1.AFactory</className>
+    <className>c1.Factory.AFactory</className>
 </config>

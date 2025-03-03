@@ -1,4 +1,6 @@
-package c1;
+package c1.Factory;
+
+import c1.Fruit.Fruit;
 
 public class Factory {
 
