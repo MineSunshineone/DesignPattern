@@ -3,7 +3,17 @@ package c3.Prototype;
 public class Client {
     public static void main(String[] args) {
         MyFruit fr1 = new Apple();
-        MyFruit fr2 = (Apple) fr1.clone();
+        MyFruit fr2 = new Banana();
+
+        MyFruitStore mfs = MyFruitStore.Getfruitstore();
+
+        mfs.add(1, fr1);
+        mfs.add(2, fr2);
+        mfs.add(3, new Apple());
+        mfs.add(4, new Banana());
+
+        MyFruit fru = (MyFruit)mfs.Get(3);
+        fru.display();
 
         fr1.display();
         fr2.display();

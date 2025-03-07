@@ -1,11 +1,26 @@
 package c3.Prototype;
 
-import java.util.HashMap;
+import java.util.Hashtable;
 
 public class MyFruitStore {
-    public static HashMap fruittable = new HashMap<Integer, MyFruit>();
 
-    public void Add(Integer key, MyFruit fruit) {
+    private static Hashtable fruittable = null;
+    private static MyFruitStore fruitStore = null;
+
+    private MyFruitStore(){
+        if(fruittable == null){
+            fruittable = new Hashtable<Integer,MyFruit>();
+        }
+    }
+
+    public static MyFruitStore Getfruitstore(){
+        if(fruittable == null){
+            fruittable = new Hashtable<Integer,MyFruit>();
+        }
+        return fruittable;
+    }
+
+    public void add(Integer key, MyFruit fruit) {
         fruittable.put(key, fruit);
 
     }
