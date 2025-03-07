@@ -17,7 +17,7 @@ public class MyFruitStore {
         if(fruittable == null){
             fruittable = new Hashtable<Integer,MyFruit>();
         }
-        return fruittable;
+        return null;
     }
 
     public void add(Integer key, MyFruit fruit) {

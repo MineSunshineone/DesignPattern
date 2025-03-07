@@ -1,5 +1,8 @@
 package c3.Prototype;
 
+import c4.Ada.Adapter;
+import c4.Ada.NewJuicer;
+
 public class Client {
     public static void main(String[] args) {
         MyFruit fr1 = new Apple();
@@ -7,18 +10,8 @@ public class Client {
 
         MyFruitStore mfs = MyFruitStore.Getfruitstore();
 
-        mfs.add(1, fr1);
-        mfs.add(2, fr2);
-        mfs.add(3, new Apple());
-        mfs.add(4, new Banana());
-
-        MyFruit fru = (MyFruit)mfs.Get(3);
-        fru.display();
-
-        fr1.display();
-        fr2.display();
-        System.out.println("fr1:" + fr1.hashCode());
-        System.out.println("fr2:" + fr2.hashCode());
+        NewJuicer newJuicer = new Adapter();
+        System.out.println(((Adapter) newJuicer).newPort(fr1, fr2));
 
         //小结：如果是类似于 a = b，那么这两个对象的HashCode会是一样的，也就相当于引用，二者为同一块内存地址
         //如果是 a = b.clone(), 两者的HashCode不一样，有点像传参进去，复制了一个新的对象，存在一块新的地址里

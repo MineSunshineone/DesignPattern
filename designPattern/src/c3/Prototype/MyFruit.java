@@ -18,4 +18,8 @@ public class MyFruit implements Cloneable {
         }
         return obj;
     }
+
+    public String Get() {
+        return kind;
+    }
 }
