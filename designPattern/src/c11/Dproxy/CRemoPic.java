@@ -1,10 +1,11 @@
-package c10.proxy;
+package c11.Dproxy;
+
+import c11.Dproxy.IShowPic;
 
 public class CRemoPic implements IShowPic {
     private String picname;
 
-    public CRemoPic(String picname) {
-        this.picname = picname;
+    public CRemoPic() {
     }
 
     @Override
